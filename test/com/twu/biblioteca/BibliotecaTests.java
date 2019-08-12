@@ -13,12 +13,12 @@ public class BibliotecaTests {
     @Test
     public void shouldReceiveAWelcomeMe() {
         String welcomeMsg = app.getWelcomeMessage();
-        assertEquals("Welcome!", welcomeMsg);
+        assertEquals("Welcome to Biblioteca! Your one-stop-shop for great books titles in Bangalore", welcomeMsg);
     }
 
     @Test
     public void shouldGetMenuOptions() {
-        String menu = "1 - List all books\n2- Checkout a book\n3- Return a book\n4- Quit";
+        String menu = "1 - List of books\n2- Checkout a book\n3- Return a book\n4- Quit";
         assertEquals(menu, app.getMenuOptions());
     }
 

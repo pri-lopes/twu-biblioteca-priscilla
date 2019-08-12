@@ -14,7 +14,7 @@ public class BibliotecaApp {
     }
 
     public static String getWelcomeMessage() {
-        return "Welcome!";
+        return "Welcome to Biblioteca! Your one-stop-shop for great books titles in Bangalore";
     }
 
     public static void loadMenu() {
@@ -31,13 +31,13 @@ public class BibliotecaApp {
                 loadMenu();
             }
         } else {
-            System.out.println("Invalid menu option. Let's try again");
+            System.out.println("Please select a valid option!");
             loadMenu();
         }
     }
 
     public static String getMenuOptions() {
-        return "1 - List all books\n2- Checkout a book\n3- Return a book\n4- Quit";
+        return "1 - List of books\n2- Checkout a book\n3- Return a book\n4- Quit";
     }
 
     public static int parseMenuChoice(String userResponse) {
@@ -80,9 +80,9 @@ public class BibliotecaApp {
         } else {
             if(book.isBookAvailable()) {
                 borrowTheBook(book);
-                System.out.println(book.checkAvailability());
+                System.out.println("Thank you! Enjoy the book");
             } else {
-                System.out.println("The book is unavailable: " + book.checkAvailability());
+                System.out.println("Sorry, that book is unavailable");
             }
         }
     }
