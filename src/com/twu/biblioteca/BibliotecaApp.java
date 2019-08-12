@@ -51,7 +51,7 @@ public class BibliotecaApp {
         }
     }
 
-    private static void processMenuOption(int menuOption) {
+    static void processMenuOption(int menuOption) {
         switch (menuOption) {
             case 1:
                 showBooksList();
@@ -72,14 +72,30 @@ public class BibliotecaApp {
     }
 
     public static void checkoutABook() {
+        String search = getUserSearch();
+        Book book = listOfBooks.findBook(search);
+
+        if(book.isBookAvailable()) {
+            borrowTheBook(book);
+            System.out.println(book.checkAvailability());
+        } else {
+            System.out.println("The book is unavailable: " + book.checkAvailability());
+        }
+    }
+
+    static String getUserSearch() {
         System.out.println("\nPlease inform the name of the book");
         Scanner prompt = new Scanner(System.in);
-        String bookName = prompt.nextLine();
-
-        System.out.println(bookName);
-
-
+        return prompt.nextLine();
     }
+
+    static void borrowTheBook(Book book) {
+        System.out.println("\nPlease inform your name");
+        Scanner prompt = new Scanner(System.in);
+        String username = prompt.nextLine();
+        book.checkout(username);
+    }
+
 
     public static void returnABook() {
 
