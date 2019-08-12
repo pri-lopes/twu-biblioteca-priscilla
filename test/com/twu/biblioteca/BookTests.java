@@ -31,11 +31,19 @@ public class BookTests {
 
     @Test
     public void shouldUserCheckoutABook() {
-        book.checkout("Ana");
+        book.checkout("Mary");
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String date = simpleDateFormat.format(new Date());
 
-        assertEquals("Ana borrowed in " + date, book.checkAvailability());
+        assertEquals("Mary borrowed in " + date, book.checkAvailability());
+    }
+
+    @Test
+    public void shouldLetBookAvailable() {
+        book.checkout("John");
+        assertEquals(false, book.isBookAvailable());
+        book.returnBook();
+        assertEquals(true, book.isBookAvailable());
     }
 }

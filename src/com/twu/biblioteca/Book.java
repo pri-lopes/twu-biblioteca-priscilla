@@ -49,4 +49,10 @@ public class Book {
         this.username = username;
         this.borrowedDate = new Date();
     }
+
+    public void returnBook() {
+        this.isAvailable = true;
+        this.username = null;
+        this.borrowedDate = null;
+    }
 }

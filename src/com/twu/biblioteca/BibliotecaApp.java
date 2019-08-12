@@ -101,7 +101,19 @@ public class BibliotecaApp {
     }
 
     public static void returnABook() {
+        System.out.println("\nPlease inform the book's name");
+        Scanner prompt = new Scanner(System.in);
+        String bookName = prompt.nextLine();
+        Book book = listOfBooks.findBook(bookName);
 
+        if(book.getName() == null) {
+            System.out.println("There is no book named '" + bookName + "'");
+        } else if(book.isBookAvailable()) {
+            System.out.println("This book has already been returned");
+        } else {
+            book.returnBook();
+            System.out.println("The book is now " + book.checkAvailability());
+        }
     }
 
 }
