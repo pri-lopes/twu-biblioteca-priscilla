@@ -18,7 +18,8 @@ public class BibliotecaApp {
     }
 
     public static void loadMenu() {
-        System.out.println("\nPlease choose an option:");
+        System.out.println("\n=== MENU ===");
+        System.out.println("Please choose an option:");
         System.out.println(getMenuOptions());
         Scanner prompt = new Scanner(System.in);
 
@@ -31,7 +32,6 @@ public class BibliotecaApp {
             }
         } else {
             System.out.println("Invalid menu option. Let's try again");
-            System.out.flush();
             loadMenu();
         }
     }
@@ -75,11 +75,15 @@ public class BibliotecaApp {
         String search = getUserSearch();
         Book book = listOfBooks.findBook(search);
 
-        if(book.isBookAvailable()) {
-            borrowTheBook(book);
-            System.out.println(book.checkAvailability());
+        if(book.getName() == null) {
+            System.out.println("There is no book named '" + search + "'");
         } else {
-            System.out.println("The book is unavailable: " + book.checkAvailability());
+            if(book.isBookAvailable()) {
+                borrowTheBook(book);
+                System.out.println(book.checkAvailability());
+            } else {
+                System.out.println("The book is unavailable: " + book.checkAvailability());
+            }
         }
     }
 
@@ -95,7 +99,6 @@ public class BibliotecaApp {
         String username = prompt.nextLine();
         book.checkout(username);
     }
-
 
     public static void returnABook() {
 
