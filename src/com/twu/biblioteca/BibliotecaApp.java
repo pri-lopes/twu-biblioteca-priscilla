@@ -5,18 +5,17 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
-    private static BooksList listOfBooks = new BooksList();
-
     public static void main(String[] args) {
         System.out.println(getWelcomeMessage());
-        loadMenu();
+        BookList listOfBooks = new BookList();
+        loadMenu(listOfBooks);
     }
 
     public static String getWelcomeMessage() {
         return "Welcome!";
     }
 
-    public static void loadMenu() {
+    public static void loadMenu(BookList listOfBooks) {
         System.out.println("\nPlease choose an option:");
         System.out.println(getMenuOptions());
         Scanner prompt = new Scanner(System.in);
@@ -25,13 +24,13 @@ public class BibliotecaApp {
         int menuOption = parseMenuChoice(userResponse);
         if (menuOption > 0) {
             if (menuOption != 4) {
-                processMenuOption(menuOption);
-                loadMenu();
+                processMenuOption(menuOption, listOfBooks);
+                loadMenu(listOfBooks);
             }
         } else {
             System.out.println("Invalid menu option. Let's try again");
             System.out.flush();
-            loadMenu();
+            loadMenu(listOfBooks);
         }
     }
 
@@ -50,10 +49,10 @@ public class BibliotecaApp {
         }
     }
 
-    private static void processMenuOption(int menuOption) {
+    private static void processMenuOption(int menuOption, BookList listOfBooks) {
         switch (menuOption) {
             case 1:
-                showBooksList();
+                showBooksList(listOfBooks);
                 break;
             case 2:
                 checkoutABook();
@@ -66,8 +65,8 @@ public class BibliotecaApp {
         }
     }
 
-    public static void showBooksList() {
-
+    public static void showBooksList(BookList listOfBooks) {
+        System.out.println(listOfBooks.getFormattedList());
     }
 
     public static void checkoutABook() {

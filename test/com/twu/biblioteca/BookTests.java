@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class BookTests {
 
     @Test
-    public void shouldRegisterABook() {
+    public void shouldGetBooksInfo() {
         Book newBook = new Book("The Handmaid's Tale", "ATWOOD, Margareth", 1985);
         assertEquals(newBook.getDetails(), "The Handmaid's Tale | ATWOOD, Margareth | 1985");
     }
