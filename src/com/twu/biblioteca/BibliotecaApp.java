@@ -24,10 +24,10 @@ public class BibliotecaApp {
         String userResponse = prompt.nextLine();
         int menuOption = parseMenuChoice(userResponse);
         if (menuOption > 0) {
-            do {
+            if (menuOption != 4) {
                 processMenuOption(menuOption);
                 loadMenu();
-            } while (menuOption != 4);
+            }
         } else {
             System.out.println("Invalid menu option. Let's try again");
             System.out.flush();
