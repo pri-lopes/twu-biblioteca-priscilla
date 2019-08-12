@@ -5,17 +5,19 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
+    static BookList listOfBooks;
+
     public static void main(String[] args) {
         System.out.println(getWelcomeMessage());
-        BookList listOfBooks = new BookList();
-        loadMenu(listOfBooks);
+        listOfBooks = new BookList();
+        loadMenu();
     }
 
     public static String getWelcomeMessage() {
         return "Welcome!";
     }
 
-    public static void loadMenu(BookList listOfBooks) {
+    public static void loadMenu() {
         System.out.println("\nPlease choose an option:");
         System.out.println(getMenuOptions());
         Scanner prompt = new Scanner(System.in);
@@ -24,13 +26,13 @@ public class BibliotecaApp {
         int menuOption = parseMenuChoice(userResponse);
         if (menuOption > 0) {
             if (menuOption != 4) {
-                processMenuOption(menuOption, listOfBooks);
-                loadMenu(listOfBooks);
+                processMenuOption(menuOption);
+                loadMenu();
             }
         } else {
             System.out.println("Invalid menu option. Let's try again");
             System.out.flush();
-            loadMenu(listOfBooks);
+            loadMenu();
         }
     }
 
@@ -49,13 +51,13 @@ public class BibliotecaApp {
         }
     }
 
-    private static void processMenuOption(int menuOption, BookList listOfBooks) {
+    private static void processMenuOption(int menuOption) {
         switch (menuOption) {
             case 1:
-                showBooksList(listOfBooks);
+                showBooksList();
                 break;
             case 2:
-                checkoutABook(listOfBooks);
+                checkoutABook();
                 break;
             case 3:
                 returnABook();
@@ -65,11 +67,11 @@ public class BibliotecaApp {
         }
     }
 
-    public static void showBooksList(BookList listOfBooks) {
+    public static void showBooksList() {
         System.out.println(listOfBooks.getFormattedList());
     }
 
-    public static void checkoutABook(BookList listOfBooks) {
+    public static void checkoutABook() {
         System.out.println("\nPlease inform the name of the book");
         Scanner prompt = new Scanner(System.in);
         String bookName = prompt.nextLine();
