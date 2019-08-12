@@ -106,13 +106,11 @@ public class BibliotecaApp {
         String bookName = prompt.nextLine();
         Book book = listOfBooks.findBook(bookName);
 
-        if(book.getName() == null) {
-            System.out.println("There is no book named '" + bookName + "'");
-        } else if(book.isBookAvailable()) {
+        if(book.getName() == null || book.isBookAvailable()) {
             System.out.println("This book has already been returned");
         } else {
             book.returnBook();
-            System.out.println("The book is now " + book.checkAvailability());
+            System.out.println("Thank you for returning the book");
         }
     }
 
