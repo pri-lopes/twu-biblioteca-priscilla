@@ -1,19 +1,19 @@
 package com.twu.biblioteca;
 
-import com.sun.tools.javac.util.ArrayUtils;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class BibliotecaApp {
+
+    private static BooksList listOfBooks = new BooksList();
 
     public static void main(String[] args) {
         System.out.println(getWelcomeMessage());
         loadMenu();
     }
 
-    public static void processMenuOption(int menuOption) {
-        
+    public static String getWelcomeMessage() {
+        return "Welcome!";
     }
 
     public static void loadMenu() {
@@ -35,10 +35,6 @@ public class BibliotecaApp {
         }
     }
 
-    public static String getWelcomeMessage() {
-        return "Welcome!";
-    }
-
     public static String getMenuOptions() {
         return "1 - List all books\n2- Checkout a book\n3- Return a book\n4- Quit";
     }
@@ -53,4 +49,33 @@ public class BibliotecaApp {
             return 0;
         }
     }
+
+    private static void processMenuOption(int menuOption) {
+        switch (menuOption) {
+            case 1:
+                showBooksList();
+                break;
+            case 2:
+                checkoutABook();
+                break;
+            case 3:
+                returnABook();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void showBooksList() {
+
+    }
+
+    public static void checkoutABook() {
+
+    }
+
+    public static void returnABook() {
+
+    }
+
 }

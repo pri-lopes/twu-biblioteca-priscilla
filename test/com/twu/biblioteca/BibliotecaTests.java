@@ -2,7 +2,7 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
