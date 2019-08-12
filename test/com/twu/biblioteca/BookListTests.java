@@ -1,9 +1,6 @@
 package com.twu.biblioteca;
 
 import org.junit.Test;
-
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 public class BookListTests {
@@ -28,5 +25,11 @@ public class BookListTests {
                 "Fahrenheit 451 | Ray Bradbury | 1953\n" +
                 "Brave New World | Aldous Huxley | 1932\n" +
                 "We Should All Be Feminists | Chimamanda Ngozi Adichie | 2014");
+    }
+
+    @Test
+    public void shouldFindBookByName() {
+        Book book = listOfBooks.findBook("The Handmaid's Tale");
+        assertEquals(book.getName(), "The Handmaid's Tale");
     }
 }

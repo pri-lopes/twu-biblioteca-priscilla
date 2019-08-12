@@ -9,6 +9,10 @@ public class Book {
 
     private int countIds = 0;
 
+    public Book() {
+
+    }
+
     public Book(String name, String author, int year) {
         this.id = countIds + 1;
         this.name = name;
@@ -19,5 +23,9 @@ public class Book {
 
     public String getDetails() {
         return this.name + " | " + this.author + " | " + this.publishYear;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

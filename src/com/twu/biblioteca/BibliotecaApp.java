@@ -55,7 +55,7 @@ public class BibliotecaApp {
                 showBooksList(listOfBooks);
                 break;
             case 2:
-                checkoutABook();
+                checkoutABook(listOfBooks);
                 break;
             case 3:
                 returnABook();
@@ -69,7 +69,13 @@ public class BibliotecaApp {
         System.out.println(listOfBooks.getFormattedList());
     }
 
-    public static void checkoutABook() {
+    public static void checkoutABook(BookList listOfBooks) {
+        System.out.println("\nPlease inform the name of the book");
+        Scanner prompt = new Scanner(System.in);
+        String bookName = prompt.nextLine();
+
+        System.out.println(bookName);
+
 
     }
 

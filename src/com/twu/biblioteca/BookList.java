@@ -31,4 +31,15 @@ public class BookList {
 
         return formattedList;
     }
+
+    public Book findBook(String search) {
+        Book book = new Book();
+        for(Book bookInList : this.listOfBooks) {
+            if(bookInList.getName().indexOf(search) != -1) {
+                book = bookInList;
+            }
+        }
+
+        return book;
+    }
 }
