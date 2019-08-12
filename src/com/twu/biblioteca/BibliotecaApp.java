@@ -9,10 +9,14 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         System.out.println(getWelcomeMessage());
-        int menuOption = loadMenu();
+        loadMenu();
     }
 
-    public static int loadMenu() {
+    public static void processMenuOption(int menuOption) {
+        
+    }
+
+    public static void loadMenu() {
         System.out.println("\nPlease choose an option:");
         System.out.println(getMenuOptions());
         Scanner prompt = new Scanner(System.in);
@@ -20,11 +24,14 @@ public class BibliotecaApp {
         String userResponse = prompt.nextLine();
         int menuOption = parseMenuChoice(userResponse);
         if (menuOption > 0) {
-            return menuOption;
+            do {
+                processMenuOption(menuOption);
+                loadMenu();
+            } while (menuOption != 4);
         } else {
             System.out.println("Invalid menu option. Let's try again");
             System.out.flush();
-            return loadMenu();
+            loadMenu();
         }
     }
 
