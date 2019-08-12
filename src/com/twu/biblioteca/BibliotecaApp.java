@@ -68,7 +68,7 @@ public class BibliotecaApp {
     }
 
     public static void showBooksList() {
-        System.out.println(listOfBooks.getFormattedList());
+        System.out.println(listOfBooks.getAvailableList());
     }
 
     public static void checkoutABook() {

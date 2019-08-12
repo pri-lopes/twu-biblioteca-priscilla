@@ -14,7 +14,7 @@ public class BookListTests {
 
     @Test
     public void shouldGetDetailedList() {
-        String detailedList = listOfBooks.getFormattedList();
+        String detailedList = listOfBooks.getAvailableList();
         assertEquals("\n" +
                 "The Handmaid's Tale | Margareth Atwood | 1985\n" +
                 "Woman, Race and Class | Angela Davis | 1981\n" +
@@ -38,5 +38,22 @@ public class BookListTests {
     public void shouldNotFindBookByInvalidName() {
         Book book = listOfBooks.findBook("Test");
         assertNull(book.getName());
+    }
+
+    @Test
+    public void shouldGetOnlyAvailableList() {
+        listOfBooks.findBook("The Handmaid's Tale").checkout("Mary");
+        listOfBooks.findBook("Woman, Race and Class").checkout("Anne");
+        listOfBooks.findBook("Alias Grace").checkout("John");
+        listOfBooks.findBook("1984").checkout("Jack");
+        listOfBooks.findBook("Animal farm").checkout("Mary");
+
+        String detailedList = listOfBooks.getAvailableList();
+        assertEquals("\n" +
+                "Feminism for the 99% | Cinzia Arruzza, Nancy Fraser, and Tithi Bhattacharya | 2019\n" +
+                "Women, the State and Revolution | Wendy Goldman | 1993\n" +
+                "Fahrenheit 451 | Ray Bradbury | 1953\n" +
+                "Brave New World | Aldous Huxley | 1932\n" +
+                "We Should All Be Feminists | Chimamanda Ngozi Adichie | 2014", detailedList);
     }
 }

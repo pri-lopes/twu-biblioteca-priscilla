@@ -22,11 +22,13 @@ public class BookList {
         return this.listOfBooks;
     }
 
-    public String getFormattedList() {
+    public String getAvailableList() {
         String formattedList = "";
         for (int i = 0; i < this.listOfBooks.size(); i++) {
             Book book = this.listOfBooks.get(i);
-            formattedList += "\n" + book.getDetails();
+            if(book.isBookAvailable()) {
+                formattedList += "\n" + book.getDetails();
+            }
         }
 
         return formattedList;
