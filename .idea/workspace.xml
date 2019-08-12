@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12d2c44-f6e7-43af-8729-2185e36bc85b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+            <state relative-caret-position="504">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+            <state relative-caret-position="523">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -105,11 +105,11 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BookReservation.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaTests.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookTests.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookTests.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java" />
       </list>
     </option>
   </component>
@@ -287,23 +287,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565618904428</updated>
-      <workItem from="1565618907109" duration="17866000" />
+      <workItem from="1565618907109" duration="18091000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookListTests_shouldFindBookByName - 2019.08.12 at 17h 23m 21s.xml">
-      <configuration name="BookListTests.shouldFindBookByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookListTests_shouldFindBookByName - 2019.08.12 at 17h 24m 53s.xml">
-      <configuration name="BookListTests.shouldFindBookByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaTests - 2019.08.12 at 17h 37m 18s.xml">
-      <configuration name="BibliotecaTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookTests - 2019.08.12 at 17h 37m 23s.xml">
-      <configuration name="BookTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookListTests - 2019.08.12 at 17h 37m 28s.xml">
       <configuration name="BookListTests" configurationId="JUnit" />
     </history-entry>
@@ -322,9 +310,21 @@
     <history-entry file="BookTests - 2019.08.12 at 18h 04m 01s.xml">
       <configuration name="BookTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BibliotecaTests - 2019.08.12 at 18h 20m 10s.xml">
+      <configuration name="BibliotecaTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTests - 2019.08.12 at 18h 20m 13s.xml">
+      <configuration name="BookTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookListTests - 2019.08.12 at 18h 20m 17s.xml">
+      <configuration name="BookListTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookListTests - 2019.08.12 at 18h 23m 24s.xml">
+      <configuration name="BookListTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17866000" />
+    <option name="totallyTimeSpent" value="18091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -405,10 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        <state relative-caret-position="137">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -428,15 +428,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        <state relative-caret-position="504">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookListTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="523">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
         </state>
       </provider>
     </entry>
