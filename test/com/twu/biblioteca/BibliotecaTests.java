@@ -53,6 +53,6 @@ public class BibliotecaTests {
 
     @Test
     public void shouldReturnInvalidMenuChoice() {
-        assertEquals(0, app.parseMenuChoice("test"));
+        assertEquals(-1, app.parseMenuChoice("test"));
     }
 }

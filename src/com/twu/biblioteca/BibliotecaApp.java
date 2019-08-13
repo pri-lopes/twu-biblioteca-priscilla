@@ -6,12 +6,14 @@ import java.util.Scanner;
 public class BibliotecaApp {
 
     static BookList listOfBooks;
+    static MovieList listOfMovies;
     static int QUIT_OPTION = 0;
     static int INVALID_MENU_OPTION = -1;
 
     public static void main(String[] args) {
         printWelcomeMessage();
         listOfBooks = new BookList();
+        listOfMovies = new MovieList();
         loadMenu();
     }
 
@@ -69,6 +71,8 @@ public class BibliotecaApp {
             case 3:
                 returnABook();
                 break;
+            case 4:
+                showMoviesList();
             default:
                 break;
         }
@@ -119,6 +123,11 @@ public class BibliotecaApp {
             book.returnBook();
             System.out.println("Thank you for returning the book");
         }
+    }
+
+    public static void showMoviesList() {
+        String formattedList = listOfMovies.getFormattedList(false);
+        System.out.println(formattedList);
     }
 
 }

@@ -26,4 +26,15 @@ public class MovieList {
             return listOfMovies;
         }
     }
+
+    public String getFormattedList(boolean onlyAvailable) {
+        ArrayList<Movie> list = getMovies(onlyAvailable);
+        String formattedList = "";
+
+        for (int i = 0; i < list.size(); i++) {
+            formattedList += "\n" + list.get(i).getDetails();
+        }
+
+        return formattedList;
+    }
 }
