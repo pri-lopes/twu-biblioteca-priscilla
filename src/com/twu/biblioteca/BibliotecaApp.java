@@ -18,11 +18,8 @@ public class BibliotecaApp {
     }
 
     public static void loadMenu() {
-        System.out.println("\n=== MENU ===");
-        System.out.println("Please choose an option:");
-        System.out.println(getMenuOptions());
+        printMenu();
         Scanner prompt = new Scanner(System.in);
-
         String userResponse = prompt.nextLine();
         int menuOption = parseMenuChoice(userResponse);
         if (menuOption > 0) {
@@ -36,8 +33,14 @@ public class BibliotecaApp {
         }
     }
 
-    public static String getMenuOptions() {
-        return "1 - List of books\n2- Checkout a book\n3- Return a book\n4- Quit";
+    public static void printMenu() {
+        String menu = "\n" +
+                "=== MENU ===\n" +
+                "1 - List of books\n" +
+                "2- Checkout a book\n" +
+                "3- Return a book\n" +
+                "4- Quit";
+        System.out.println(menu);
     }
 
     public static int parseMenuChoice(String userResponse) {

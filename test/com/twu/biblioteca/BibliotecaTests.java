@@ -35,8 +35,14 @@ public class BibliotecaTests {
 
     @Test
     public void shouldGetMenuOptions() {
-        String menu = "1 - List of books\n2- Checkout a book\n3- Return a book\n4- Quit";
-        assertEquals(menu, app.getMenuOptions());
+        String menu = "\n" +
+                "=== MENU ===\n" +
+                "1 - List of books\n" +
+                "2- Checkout a book\n" +
+                "3- Return a book\n" +
+                "4- Quit\n";
+        app.printMenu();
+        assertEquals(menu, outContent.toString());
     }
 
     @Test
