@@ -36,10 +36,11 @@ public class BibliotecaApp {
     public static void printMenu() {
         String menu = "\n" +
                 "=== MENU ===\n" +
-                "1 - List of books\n" +
+                "1- List of books\n" +
                 "2- Checkout a book\n" +
                 "3- Return a book\n" +
-                "4- Quit";
+                "4- List of movies\n" +
+                "5- Quit";
         System.out.println(menu);
     }
 
