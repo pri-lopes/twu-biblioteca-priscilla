@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class BibliotecaApp {
 
     static BookList listOfBooks;
+    static int QUIT_OPTION = 0;
+    static int INVALID_MENU_OPTION = -1;
 
     public static void main(String[] args) {
         printWelcomeMessage();
@@ -22,13 +24,14 @@ public class BibliotecaApp {
         Scanner prompt = new Scanner(System.in);
         String userResponse = prompt.nextLine();
         int menuOption = parseMenuChoice(userResponse);
-        if (menuOption > 0) {
-            if (menuOption != 4) {
-                processMenuOption(menuOption);
-                loadMenu();
-            }
-        } else {
+
+        if (menuOption == INVALID_MENU_OPTION) {
             System.out.println("Please select a valid option!");
+            loadMenu();
+        } else if (menuOption == QUIT_OPTION) {
+            System.out.println("\nBye!");
+        } else {
+            processMenuOption(menuOption);
             loadMenu();
         }
     }
@@ -51,7 +54,7 @@ public class BibliotecaApp {
             boolean isValid = Arrays.binarySearch(validOptions, chosenOption) >= 0;
             return isValid ? chosenOption : 0;
         } catch (Exception e) {
-            return 0;
+            return -1;
         }
     }
 
