@@ -8,13 +8,13 @@ public class BibliotecaApp {
     static BookList listOfBooks;
 
     public static void main(String[] args) {
-        System.out.println(getWelcomeMessage());
+        printWelcomeMessage();
         listOfBooks = new BookList();
         loadMenu();
     }
 
-    public static String getWelcomeMessage() {
-        return "Welcome to Biblioteca! Your one-stop-shop for great books titles in Bangalore";
+    public static void printWelcomeMessage() {
+        System.out.println("Welcome to Biblioteca! Your one-stop-shop for great books titles in Bangalore");
     }
 
     public static void loadMenu() {
