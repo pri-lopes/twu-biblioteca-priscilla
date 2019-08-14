@@ -39,7 +39,7 @@ public class Product {
         }
 
         this.isAvailable = false;
-        return "Thank you! Enjoy the book";
+        return "Thank you! Enjoy the " + this.type;
     }
 
     public String returnProduct() {
