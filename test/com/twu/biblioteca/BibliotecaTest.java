@@ -10,7 +10,7 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class BibliotecaTests {
+public class BibliotecaTest {
 
     BibliotecaApp app = new BibliotecaApp();
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -33,26 +33,5 @@ public class BibliotecaTests {
         assertEquals(welcomeMsg, outContent.toString());
     }
 
-    @Test
-    public void shouldGetMenuOptions() {
-        String menu = "\n" +
-                "=== MENU ===\n" +
-                "1- List of books\n" +
-                "2- Checkout a book\n" +
-                "3- Return a book\n" +
-                "4- List of movies\n" +
-                "5- Quit\n";
-        app.printMenu();
-        assertEquals(menu, outContent.toString());
-    }
 
-    @Test
-    public void shouldReturnValidMenuChoice() {
-        assertEquals(1, app.parseMenuChoice("1"));
-    }
-
-    @Test
-    public void shouldReturnInvalidMenuChoice() {
-        assertEquals(-1, app.parseMenuChoice("test"));
-    }
 }
