@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class BibliotecaApp {
 
     static Menu menu;
+    static String BOOK_TYPE = "book";
+    static String MOVIE_TYPE = "movie";
 
     public static void main(String[] args) {
         printWelcomeMessage();
@@ -37,21 +39,21 @@ public class BibliotecaApp {
             System.out.println(menu.quitApplication());
         } else {
             if (option == MenuOption.LIST_BOOKS.value) {
-                System.out.println(menu.getListOfProducts(menu.BOOK_TYPE));
+                System.out.println(menu.getListOfProducts(BOOK_TYPE));
             } else if (option == MenuOption.CHECKOUT_BOOK.value) {
-                search = getUserSearch(menu.BOOK_TYPE);
-                System.out.println(menu.checkoutProduct(search, menu.BOOK_TYPE));
+                search = getUserSearch(BOOK_TYPE);
+                System.out.println(menu.checkoutProduct(search, BOOK_TYPE));
             } else if (option == MenuOption.RETURN_BOOK.value) {
-                search = getUserSearch(menu.BOOK_TYPE);
-                System.out.println(menu.returnProduct(search, menu.BOOK_TYPE));
+                search = getUserSearch(BOOK_TYPE);
+                System.out.println(menu.returnProduct(search, BOOK_TYPE));
             } else if (option == MenuOption.LIST_MOVIES.value) {
-                System.out.println(menu.getListOfProducts(menu.MOVIE_TYPE));
+                System.out.println(menu.getListOfProducts(MOVIE_TYPE));
             } else if (option == MenuOption.CHECKOUT_MOVIE.value) {
-                search = getUserSearch(menu.MOVIE_TYPE);
-                System.out.println(menu.checkoutProduct(search, menu.MOVIE_TYPE));
+                search = getUserSearch(MOVIE_TYPE);
+                System.out.println(menu.checkoutProduct(search, MOVIE_TYPE));
             } else if (option == MenuOption.RETURN_MOVIE.value) {
-                search = getUserSearch(menu.MOVIE_TYPE);
-                System.out.println(menu.returnProduct(search, menu.MOVIE_TYPE));
+                search = getUserSearch(MOVIE_TYPE);
+                System.out.println(menu.returnProduct(search, MOVIE_TYPE));
             } else {
                 System.out.println(menu.invalidOption());
             }

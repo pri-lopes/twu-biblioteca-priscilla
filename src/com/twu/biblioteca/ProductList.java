@@ -63,7 +63,7 @@ public class ProductList {
     public Product findProduct(String search) {
         Product product = new Product();
         for(Product p: this.listOfProducts) {
-            if (p.name == search) {
+            if (p.name.toLowerCase().equals(search.toLowerCase())) {
                 product = p;
             }
         }

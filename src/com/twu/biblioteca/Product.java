@@ -17,6 +17,10 @@ public class Product {
         this.isAvailable = true;
     }
 
+    public boolean isProductReal() {
+        return this.name != null && this.type != null;
+    }
+
     public boolean isAvailable() {
         return this.isAvailable;
     }

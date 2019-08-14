@@ -71,7 +71,7 @@ public class Menu {
 
     public String checkoutProduct(String search, String type) {
         Product product = findProduct(search, type);
-        if (product == null) {
+        if (product.getType() == null) {
             return "Sorry, that " + type + " is not available";
         }
 
@@ -80,7 +80,7 @@ public class Menu {
 
     public String returnProduct(String search, String type) {
         Product product = findProduct(search, type);
-        if (product == null) {
+        if (product.getType() == null) {
             return "That is not a valid " + type + " to return";
         }
 
